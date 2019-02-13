@@ -4,12 +4,11 @@
 
 ## 1. Find all the companies that include 'Facebook' on the **name** field.
 
- - **`query`**: {name: 'Facebook'}
- 
+db.companies.find({ name: "Facebook" });
+
  ## 2. Find all the companies which **category_code** is 'web'. Retrive only their `name` field:
 
- - **`query`**: {category_code: 'web'}
- - **`projection`**: {name: 1, _id: 0}
+db.companies.find({ category_code: "web" }, {name: 1, _id: 0});
 
 ## 3. Find all the companies named "Twitter", and retrieve only their `name`, `category_code` and `founded_year` fields.
 
@@ -23,7 +22,7 @@
 
 ## 8. Find all the companies that were not **founded** on 'June'. Skip the first 50 results and retrieve only the `founded_month` and `name` fields.
 
-## 9. Find all the companies that have 50 employees, but do not correspond to the 'web' **category_code**. 
+## 9. Find all the companies that have 50 employees, but do not correspond to the 'web' **category_code**.
 
 ## 10. Find all the companies that have been founded on the 1st of the month, but does not have either 50 employees nor 'web' as their **category_code**. Retrieve only the `founded_day` and `name` and limit the search to 5 documents.
 

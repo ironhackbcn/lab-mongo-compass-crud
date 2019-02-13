@@ -64,9 +64,6 @@ Let's do one more together:
 
 2. Find all the companies which **category_code** is 'web'. Retrive only their `name` field:
 
- - **`query`**: {category_code: 'web'}
- - **`projection`**: {name: 1, _id: 0}
-
  ```
 db.companies.find({ category_code: "web" }, {name: 1, _id: 0});
 ```
